@@ -16,6 +16,7 @@ function TaskForm({ task, onSubmit, onCancel }) {
       setDescription('');
       setPriority('medium');
     }
+    setErr('');
   }, [task]);
 
   function submit(e) {
@@ -34,12 +35,17 @@ function TaskForm({ task, onSubmit, onCancel }) {
 
   return (
     <form className="form" onSubmit={submit}>
-      <h2>{task ? 'Edit Task' : 'New Task'}</h2>
+      <h2 id="task-form-title">{task ? 'Edit Task' : 'New Task'}</h2>
 
-      {err ? <p className="form-err">{err}</p> : null}
+      {err ? (
+        <p className="form-err" role="alert">
+          {err}
+        </p>
+      ) : null}
 
-      <label>Title</label>
+      <label htmlFor="task-title">Title</label>
       <input
+        id="task-title"
         type="text"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
@@ -47,8 +53,9 @@ function TaskForm({ task, onSubmit, onCancel }) {
         maxLength={120}
       />
 
-      <label>Description</label>
+      <label htmlFor="task-desc">Description</label>
       <textarea
+        id="task-desc"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
         placeholder="Description"
@@ -56,8 +63,12 @@ function TaskForm({ task, onSubmit, onCancel }) {
         maxLength={500}
       />
 
-      <label>Priority</label>
-      <select value={priority} onChange={(e) => setPriority(e.target.value)}>
+      <label htmlFor="task-priority">Priority</label>
+      <select
+        id="task-priority"
+        value={priority}
+        onChange={(e) => setPriority(e.target.value)}
+      >
         <option value="low">Low</option>
         <option value="medium">Medium</option>
         <option value="high">High</option>

@@ -13,7 +13,7 @@ function validateCreate(req, res, next) {
     return res.status(400).json({ error: 'Title is too long' });
   }
 
-  if (description !== undefined && description !== null && typeof description !== 'string') {
+  if (description !== undefined && typeof description !== 'string') {
     return res.status(400).json({ error: 'Description must be a string' });
   }
 
@@ -52,13 +52,12 @@ function validateUpdate(req, res, next) {
     }
   }
 
-  if (description !== undefined && description !== null) {
-    if (typeof description !== 'string') {
-      return res.status(400).json({ error: 'Description must be a string' });
-    }
-    if (description.length > 500) {
-      return res.status(400).json({ error: 'Description is too long' });
-    }
+  if (description !== undefined && typeof description !== 'string') {
+    return res.status(400).json({ error: 'Description must be a string' });
+  }
+
+  if (typeof description === 'string' && description.length > 500) {
+    return res.status(400).json({ error: 'Description is too long' });
   }
 
   if (priority !== undefined && PRIORITIES.indexOf(priority) === -1) {

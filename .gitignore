@@ -5,6 +5,6 @@ frontend/build/
 .env
 .DS_Store
 npm-debug.log*
-
+*.log
 *.zip
-tatia_tsikhelashvili_helfy_task.zip
+coverage/

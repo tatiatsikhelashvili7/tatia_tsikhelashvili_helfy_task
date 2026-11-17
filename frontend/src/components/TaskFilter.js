@@ -1,29 +1,30 @@
 import React from 'react';
 
 function TaskFilter({ current, onChange }) {
+  const options = [
+    { key: 'all', label: 'All' },
+    { key: 'pending', label: 'Pending' },
+    { key: 'completed', label: 'Completed' }
+  ];
+
   return (
-    <div className="filters">
-      <button
-        type="button"
-        className={current === 'all' ? 'filter-btn on' : 'filter-btn'}
-        onClick={() => onChange('all')}
-      >
-        All
-      </button>
-      <button
-        type="button"
-        className={current === 'pending' ? 'filter-btn on' : 'filter-btn'}
-        onClick={() => onChange('pending')}
-      >
-        Pending
-      </button>
-      <button
-        type="button"
-        className={current === 'completed' ? 'filter-btn on' : 'filter-btn'}
-        onClick={() => onChange('completed')}
-      >
-        Completed
-      </button>
+    <div className="filters" role="group" aria-label="Filter tasks">
+      {options.map(function (opt) {
+        const on = current === opt.key;
+        return (
+          <button
+            key={opt.key}
+            type="button"
+            className={on ? 'filter-btn on' : 'filter-btn'}
+            aria-pressed={on}
+            onClick={function () {
+              onChange(opt.key);
+            }}
+          >
+            {opt.label}
+          </button>
+        );
+      })}
     </div>
   );
 }
