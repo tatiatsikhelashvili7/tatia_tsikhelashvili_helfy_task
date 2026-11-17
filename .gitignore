@@ -1,0 +1,10 @@
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+frontend/build/
+.env
+.DS_Store
+npm-debug.log*
+
+*.zip
+tatia_tsikhelashvili_helfy_task.zip

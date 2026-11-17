@@ -1,0 +1,437 @@
+.page {
+  min-height: 100vh;
+}
+
+.hero {
+  background: #2d3142;
+  color: #fff;
+  padding: 36px 16px 56px;
+}
+
+.hero-inner {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0 0 8px 0;
+  font-size: 32px;
+  font-weight: 650;
+}
+
+.hero p {
+  margin: 0;
+  font-size: 14px;
+  color: #c5cad6;
+}
+
+.app {
+  max-width: 820px;
+  margin: -28px auto 0;
+  padding: 0 16px 70px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 10px 12px;
+  box-shadow: 0 8px 24px rgba(45, 49, 66, 0.08);
+}
+
+.filters {
+  background: #f3f5f9;
+  border-radius: 10px;
+  padding: 3px;
+}
+
+.filter-btn {
+  border: none;
+  background: none;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  color: #4b5163;
+  transition: background 0.2s, color 0.2s;
+}
+
+.filter-btn:hover {
+  background: #e4e8f0;
+}
+
+.filter-btn.on {
+  background: #2d3142;
+  color: #fff;
+}
+
+.btn {
+  border: 1px solid #d5dae3;
+  background: #fff;
+  color: #2d3142;
+  padding: 9px 15px;
+  font-size: 14px;
+  border-radius: 9px;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  background: #f3f5f9;
+}
+
+.btn-main {
+  background: #ef8354;
+  color: #fff;
+  border: none;
+}
+
+.btn-main:hover {
+  background: #e06b3a;
+}
+
+.btn-red {
+  background: #e05656;
+  color: #fff;
+  border: none;
+}
+
+.btn-red:hover {
+  background: #c94444;
+}
+
+.small {
+  padding: 7px 12px;
+  font-size: 13px;
+}
+
+.error-box {
+  background: #fdecec;
+  color: #9b1c1c;
+  border: 1px solid #f4c7c7;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error-close {
+  border: none;
+  background: none;
+  font-size: 16px;
+  color: inherit;
+}
+
+.center-text {
+  text-align: center;
+  padding: 50px 16px;
+  color: #5b6170;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(45, 49, 66, 0.08);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(20, 24, 34, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 10;
+}
+
+.modal {
+  background: #fff;
+  width: 100%;
+  max-width: 460px;
+  padding: 26px;
+  border-radius: 16px;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.22);
+}
+
+.form h2 {
+  margin: 0 0 6px 0;
+  color: #2d3142;
+}
+
+.form label {
+  display: block;
+  margin: 13px 0 5px;
+  font-size: 13px;
+  color: #5b6170;
+}
+
+.form input,
+.form textarea,
+.form select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d5dae3;
+  border-radius: 9px;
+  font-size: 14px;
+  background: #fbfcfe;
+}
+
+.form input:focus,
+.form textarea:focus,
+.form select:focus {
+  outline: none;
+  border-color: #ef8354;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(239, 131, 84, 0.18);
+}
+
+.form-err {
+  color: #c0392b;
+  margin: 8px 0 0;
+  font-size: 13px;
+}
+
+.form-btns {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.form-btns .btn {
+  margin-left: 8px;
+}
+
+.carousel {
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px 12px 14px;
+  box-shadow: 0 8px 24px rgba(45, 49, 66, 0.08);
+}
+
+.carousel-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.viewport {
+  overflow: hidden;
+  width: 100%;
+  flex: 1;
+}
+
+.track {
+  display: flex;
+}
+
+.slide {
+  min-width: 100%;
+  max-width: 100%;
+  padding: 4px 6px 8px;
+}
+
+.arrow {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid #d5dae3;
+  background: #fff;
+  font-size: 28px;
+  line-height: 1;
+  color: #2d3142;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+.arrow:hover {
+  background: #f3f5f9;
+  transform: scale(1.06);
+  box-shadow: 0 4px 10px rgba(45, 49, 66, 0.12);
+}
+
+.arrow:disabled {
+  opacity: 0.3;
+  transform: none;
+  box-shadow: none;
+}
+
+.dots {
+  text-align: center;
+  margin-top: 6px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: none;
+  background: #d5dae3;
+  margin: 0 4px;
+  padding: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.dot.on {
+  background: #ef8354;
+  transform: scale(1.25);
+}
+
+.counter {
+  text-align: center;
+  font-size: 12px;
+  color: #7b8190;
+  margin: 8px 0 2px;
+}
+
+.empty {
+  text-align: center;
+  padding: 56px 16px;
+  background: #fff;
+  border-radius: 16px;
+  color: #5b6170;
+  box-shadow: 0 8px 24px rgba(45, 49, 66, 0.08);
+}
+
+.card {
+  border: 1px solid #e6eaf0;
+  border-left: 7px solid #9aa3b2;
+  border-radius: 14px;
+  padding: 22px 20px 16px;
+  min-height: 230px;
+  background: #fff;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 10px 22px rgba(45, 49, 66, 0.1);
+}
+
+.card.prio-low {
+  border-left-color: #2a9d8f;
+}
+
+.card.prio-medium {
+  border-left-color: #e9c46a;
+}
+
+.card.prio-high {
+  border-left-color: #e76f51;
+}
+
+.card.done {
+  background: #f7f8fb;
+}
+
+.card.done .card-title,
+.strike {
+  text-decoration: line-through;
+  color: #6b7280;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.badge {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.badge.prio-low {
+  background: #d8f3ef;
+  color: #1b7a70;
+}
+
+.badge.prio-medium {
+  background: #fff3d1;
+  color: #9a6b00;
+}
+
+.badge.prio-high {
+  background: #fde0d8;
+  color: #b23a22;
+}
+
+.date {
+  font-size: 12px;
+  color: #8a90a0;
+}
+
+.card-title {
+  margin: 0 0 8px 0;
+  font-size: 22px;
+  color: #2d3142;
+}
+
+.card-desc {
+  margin: 0 0 18px 0;
+  font-size: 15px;
+  line-height: 1.5;
+  min-height: 44px;
+  color: #5b6170;
+}
+
+.card-btns {
+  border-top: 1px solid #eef1f5;
+  padding-top: 12px;
+}
+
+.card-btns .btn {
+  margin-right: 7px;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 26px 16px 48px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .top-bar {
+    display: block;
+  }
+
+  .filters {
+    margin-bottom: 10px;
+    display: flex;
+  }
+
+  .filter-btn {
+    flex: 1;
+  }
+
+  .btn-main {
+    width: 100%;
+  }
+
+  .carousel-row {
+    gap: 4px;
+  }
+
+  .arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 22px;
+  }
+
+  .card {
+    min-height: 250px;
+    padding: 16px 14px 12px;
+  }
+}
